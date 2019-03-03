@@ -5,7 +5,7 @@ import { boxShadows, colors, transitions } from "../../_shared/styles";
 import { Icon } from "../icon";
 
 export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
-  type: "default" | "outline";
+  type: "default" | "outline" | "no-style";
   sizeType?: "default" | "large";
   icon?: string;
 };
@@ -38,17 +38,6 @@ export class Button extends React.PureComponent<ButtonProps> {
           text-transform: uppercase;
           vertical-align: middle;
 
-          ${type === "default" &&
-            css`
-              background: ${colors.BRIGHT_SUN};
-              border: 2px solid transparent;
-            `}
-          ${type === "outline" &&
-            css`
-              background: ${colors.WHITE};
-              border: 2px solid ${colors.BRIGHT_SUN};
-            `}
-
           ${sizeType === "default" &&
             css`
               height: 44px;
@@ -72,10 +61,37 @@ export class Button extends React.PureComponent<ButtonProps> {
               padding: 11px;
             `}
 
+          ${type === "default" &&
+            css`
+              background: ${colors.BRIGHT_SUN};
+              border: 2px solid transparent;
+            `}
+          ${type === "outline" &&
+            css`
+              background: ${colors.WHITE};
+              border: 2px solid ${colors.BRIGHT_SUN};
+            `}
+
           &:hover {
             transform: translateY(-6px);
             box-shadow: ${boxShadows.ON_HOVER};
           }
+
+          ${type === "no-style" &&
+            css`
+              height: auto;
+              min-width: auto;
+              border: none;
+              background-color: transparent;
+              padding: 0px;
+              box-shadow: none;
+
+              &:hover {
+                transform: none;
+                box-shadow: none;
+                color: ${colors.BRIGHT_SUN};
+              }
+            `}
         `}
       >
         {icon && (

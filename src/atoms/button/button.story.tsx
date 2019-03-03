@@ -21,10 +21,16 @@ storiesOf("✨ Atoms/Button/Regular", module)
   .add("outline", () => <Button type="outline">click me</Button>, {
     info: { inline: true }
   })
+  .add("no-style", () => <Button type="no-style">click me</Button>, {
+    info: { inline: true }
+  })
   .add("icon", () => <Button icon="bicycle" />, {
     info: { inline: true }
   })
   .add("icon and text", () => <Button icon="bicycle">Bicycle</Button>, {
+    info: { inline: true }
+  })
+  .add("icon no-style", () => <Button icon="bicycle" type="no-style" />, {
     info: { inline: true }
   });
 
