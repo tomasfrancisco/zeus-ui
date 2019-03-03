@@ -26,7 +26,9 @@ export class Button extends React.PureComponent<ButtonProps> {
           color: ${colors.ZEUS};
           box-shadow: ${boxShadows.DEFAULT};
           text-transform: uppercase;
-          transition: ${transitions.DEFAULT};
+          transition: ${`all ${transitions.DEFAULT_FUNCTION} ${
+            transitions.DEFAULT_TIME
+          }`};
           cursor: pointer;
 
           /* typography */

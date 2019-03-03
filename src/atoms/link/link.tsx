@@ -14,7 +14,9 @@ export const Link = ({ ...props }: LinkProps) => (
       line-height: normal;
       font-size: 24px;
 
-      transition: ${transitions.DEFAULT};
+      transition: ${`all ${transitions.DEFAULT_FUNCTION} ${
+        transitions.DEFAULT_TIME
+      }`};
       color: ${colors.FIORD};
 
       &:hover {

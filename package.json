@@ -28,8 +28,9 @@
     "@babel/core": "^7.3.4",
     "@emotion/babel-preset-css-prop": "^10.0.7",
     "@emotion/core": "^10.0.7",
-    "@storybook/addon-info": "^5.0.0-rc.8",
-    "@storybook/react": "^5.0.0-rc.8",
+    "@storybook/addon-info": "^5.0.0-rc.9",
+    "@storybook/react": "^5.0.0-rc.9",
+    "@types/react-textarea-autosize": "^4.3.3",
     "@types/storybook__addon-info": "^4.1.0",
     "@types/storybook__react": "^4.0.1",
     "babel-loader": "^8.0.5",
@@ -40,6 +41,7 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "ionicons": "^4.5.5"
+    "ionicons": "^4.5.5",
+    "react-textarea-autosize": "^7.1.0"
   }
 }

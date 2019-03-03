@@ -5,7 +5,8 @@ export const colors = {
   BRIGHT_SUN: "#ffd44a",
   ZEUS: "#1c1a17",
   FIORD: "#3c5266",
-  FRENCH_GRAY: "#c3c3ca"
+  FRENCH_GRAY: "#c3c3ca",
+  SHADY_LADY: "#9F999F"
 };
 
 export const boxShadows = {
@@ -14,5 +15,7 @@ export const boxShadows = {
 };
 
 export const transitions = {
-  DEFAULT: "all ease-in-out 0.15s"
+  DEFAULT_TIME: "0.15s",
+  DEFAULT_FUNCTION: "ease-in-out",
+  LABEL: "all ease-in-out 0.25s"
 };

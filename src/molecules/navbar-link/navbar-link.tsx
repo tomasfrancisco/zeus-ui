@@ -19,7 +19,9 @@ export const NavbarLink = ({ active = false, ...props }: NavbarLinkProps) => (
       cursor: pointer;
 
       color: ${colors.FRENCH_GRAY};
-      transition: ${transitions.DEFAULT};
+      transition: ${`all ${transitions.DEFAULT_FUNCTION} ${
+        transitions.DEFAULT_TIME
+      }`};
 
       &:hover {
         color: ${colors.BRIGHT_SUN};
@@ -28,7 +30,7 @@ export const NavbarLink = ({ active = false, ...props }: NavbarLinkProps) => (
       ${active &&
         css`
           color: ${colors.ZEUS};
-          cursor: default;
+          cursor: text;
 
           &:hover {
             color: currentColor;
