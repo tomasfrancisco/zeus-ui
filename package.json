@@ -30,6 +30,7 @@
     "@emotion/core": "^10.0.7",
     "@storybook/addon-info": "^5.0.0-rc.8",
     "@storybook/react": "^5.0.0-rc.8",
+    "@types/storybook__addon-info": "^4.1.0",
     "@types/storybook__react": "^4.0.1",
     "babel-loader": "^8.0.5",
     "react": "^16.8.3",

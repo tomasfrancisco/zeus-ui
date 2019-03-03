@@ -5,6 +5,9 @@ export const addDecorators = () =>
   addDecorator(
     withInfo({
       styles: {
+        body: {
+          fontFamily: "Lato"
+        },
         header: {
           h1: {
             marginRight: "20px",
