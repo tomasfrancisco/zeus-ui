@@ -6,3 +6,6 @@ public
 
 # System
 .DS_Store
+
+# Tooling
+yarn-error.log
