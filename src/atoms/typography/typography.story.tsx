@@ -5,7 +5,7 @@ import * as React from "react";
 import { HeavyText, Text } from "../text";
 import { Link } from "../link";
 
-storiesOf("Atoms/Typography/All", module).add(
+storiesOf("✨ Atoms/Typography/All", module).add(
   "default",
   () => (
     <>

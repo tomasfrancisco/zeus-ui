@@ -4,17 +4,17 @@ import * as React from "react";
 import { boxShadows, colors, transforms } from "../../_shared/styles";
 
 export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
-  size?: "default" | "large";
+  sizeType?: "default" | "large";
   outline?: boolean;
 };
 
 export class Button extends React.PureComponent<ButtonProps> {
   static defaultProps = {
-    size: "default"
+    sizeType: "default"
   };
 
   public render() {
-    const { outline, size, ...props } = this.props;
+    const { outline, sizeType, ...props } = this.props;
     return (
       <button
         {...props}
@@ -30,14 +30,14 @@ export class Button extends React.PureComponent<ButtonProps> {
               border: 2px solid transparent;
             `}
 
-          ${size === "default" &&
+          ${sizeType === "default" &&
             css`
               height: 44px;
               font-size: 14px;
               padding: 12px 54px;
             `}
           
-          ${size === "large" &&
+          ${sizeType === "large" &&
             css`
               height: 64px;
               font-size: 24px;

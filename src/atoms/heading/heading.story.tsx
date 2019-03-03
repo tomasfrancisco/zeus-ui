@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { H1, H2, H3, H4, H5, H6 } from "./heading";
 
-storiesOf("Atoms/Typography/Heading", module).add(
+storiesOf("✨ Atoms/Typography/Heading", module).add(
   "default",
   () => (
     <>

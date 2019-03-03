@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { Text, HeavyText } from "./text";
 
-storiesOf("Atoms/Typography/Paragraph", module).add(
+storiesOf("✨ Atoms/Typography/Paragraph", module).add(
   "default",
   () => (
     <>
