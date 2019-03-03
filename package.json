@@ -38,5 +38,8 @@
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "react-dom": "^16.8.3",
     "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "ionicons": "^4.5.5"
   }
 }

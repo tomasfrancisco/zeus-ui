@@ -3,14 +3,16 @@ import * as React from "react";
 
 import { Text, HeavyText } from "./text";
 
+export const defaultStory = () => (
+  <>
+    <Text>Text</Text>
+    <HeavyText>Heavy Text</HeavyText>
+  </>
+);
+
 storiesOf("✨ Atoms/Typography/Paragraph", module).add(
   "default",
-  () => (
-    <>
-      <Text>Text</Text>
-      <HeavyText>Heavy Text</HeavyText>
-    </>
-  ),
+  defaultStory,
   {
     info: { inline: true }
   }

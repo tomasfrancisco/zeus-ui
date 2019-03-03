@@ -1,6 +1,6 @@
 import * as React from "react";
 import css from "@emotion/css";
-import { colors, transforms } from "../../_shared/styles";
+import { colors, transitions } from "../../_shared/styles";
 
 export type LinkProps = React.HTMLProps<HTMLAnchorElement> & {};
 
@@ -14,7 +14,7 @@ export const Link = ({ ...props }: LinkProps) => (
       line-height: normal;
       font-size: 24px;
 
-      transition: ${transforms.DEFAULT};
+      transition: ${transitions.DEFAULT};
       color: ${colors.FIORD};
 
       &:hover {

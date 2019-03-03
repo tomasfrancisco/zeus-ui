@@ -6,9 +6,9 @@ import { Button } from "./button";
 storiesOf("✨ Atoms/Button/All", module).add("default", () => (
   <>
     <Button>click me</Button>
-    <Button outline={true}>click me</Button>
+    <Button type="outline">click me</Button>
     <Button sizeType="large">click me</Button>
-    <Button outline={true} sizeType="large">
+    <Button type="outline" sizeType="large">
       click me
     </Button>
   </>
@@ -18,7 +18,13 @@ storiesOf("✨ Atoms/Button/Regular", module)
   .add("default", () => <Button>click me</Button>, {
     info: { inline: true }
   })
-  .add("outline", () => <Button outline={true}>click me</Button>, {
+  .add("outline", () => <Button type="outline">click me</Button>, {
+    info: { inline: true }
+  })
+  .add("icon", () => <Button icon="bicycle" />, {
+    info: { inline: true }
+  })
+  .add("icon and text", () => <Button icon="bicycle">Bicycle</Button>, {
     info: { inline: true }
   });
 
@@ -29,8 +35,22 @@ storiesOf("✨ Atoms/Button/Large", module)
   .add(
     "outline",
     () => (
-      <Button outline={true} sizeType="large">
+      <Button type="outline" sizeType="large">
         click me
+      </Button>
+    ),
+    {
+      info: { inline: true }
+    }
+  )
+  .add("icon", () => <Button icon="bicycle" sizeType="large" />, {
+    info: { inline: true }
+  })
+  .add(
+    "icon and text",
+    () => (
+      <Button icon="bicycle" sizeType="large">
+        Bicycle
       </Button>
     ),
     {

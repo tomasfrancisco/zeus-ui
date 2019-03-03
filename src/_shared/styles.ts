@@ -4,7 +4,8 @@ export const colors = {
   ANZAC: "#e1bc44",
   BRIGHT_SUN: "#ffd44a",
   ZEUS: "#1c1a17",
-  FIORD: "#3C5266"
+  FIORD: "#3c5266",
+  FRENCH_GRAY: "#c3c3ca"
 };
 
 export const boxShadows = {
@@ -12,6 +13,6 @@ export const boxShadows = {
   ON_HOVER: "4px 10px 24px rgba(159, 153, 159, 0.5)"
 };
 
-export const transforms = {
+export const transitions = {
   DEFAULT: "all ease-in-out 0.15s"
 };
