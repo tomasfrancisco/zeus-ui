@@ -16,6 +16,7 @@ export const SectionHeading = ({ label, ...props }: SectionHeadingProps) => (
     <H1
       {...props}
       css={css`
+        display: inline-block;
         text-transform: uppercase;
       `}
     />

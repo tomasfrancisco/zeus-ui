@@ -2,7 +2,6 @@ import css from "@emotion/css";
 import * as React from "react";
 
 const defaultStyle = css`
-  display: inline-block;
   margin: 0;
   font-family: Rajdhani;
   font-style: normal;
