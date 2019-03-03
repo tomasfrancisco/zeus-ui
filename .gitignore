@@ -1,0 +1,8 @@
+# Dev
+node_modules
+
+# Build
+public
+
+# System
+.DS_Store

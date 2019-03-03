@@ -1,0 +1,40 @@
+{
+  "name": "tomasfrancisco.com-design-system",
+  "version": "0.0.1",
+  "description": "tomasfrancisco.com Design System",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomasfrancisco/tomasfrancisco.com-design-system.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "design-system",
+    "ui-system",
+    "components"
+  ],
+  "author": "@tomasfrancisco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomasfrancisco/tomasfrancisco.com-design-system/issues"
+  },
+  "homepage": "https://github.com/tomasfrancisco/tomasfrancisco.com-design-system#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@storybook/addon-info": "^4.1.13",
+    "@storybook/react": "^4.1.13",
+    "@types/storybook__react": "^4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.5",
+    "react": "^16.8.3",
+    "react-docgen-typescript-loader": "^3.0.1",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-dom": "^16.8.3",
+    "typescript": "^3.3.3333"
+  }
+}
