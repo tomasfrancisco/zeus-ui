@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import * as React from "react";
+import React from "react";
 
 import { boxShadows, colors, transitions } from "../../_shared/styles";
 import { Icon } from "../icon";
@@ -10,18 +10,17 @@ export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
   icon?: string;
 };
 
-export class Button extends React.PureComponent<ButtonProps> {
-  static defaultProps = {
-    type: "default",
-    sizeType: "default"
-  };
-
-  public render() {
-    const { type, sizeType, icon, children, ...props } = this.props;
-    return (
-      <button
-        {...props}
-        css={css`
+export const Button = ({
+  type = "default",
+  sizeType = "default",
+  icon,
+  children,
+  ...props
+}: ButtonProps) => {
+  return (
+    <button
+      {...props}
+      css={css`
           border-radius: 50px;
           color: ${colors.ZEUS};
           box-shadow: ${boxShadows.DEFAULT};
@@ -95,11 +94,11 @@ export class Button extends React.PureComponent<ButtonProps> {
               }
             `}
         `}
-      >
-        {icon && (
-          <Icon
-            name={icon}
-            css={css`
+    >
+      {icon && (
+        <Icon
+          name={icon}
+          css={css`
               vertical-align: top;
               
               ${sizeType === "default" &&
@@ -117,10 +116,9 @@ export class Button extends React.PureComponent<ButtonProps> {
                   margin-right: 12px;
                 `}
             `}
-          />
-        )}
-        {children}
-      </button>
-    );
-  }
-}
+        />
+      )}
+      {children}
+    </button>
+  );
+};

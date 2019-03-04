@@ -1,59 +1,49 @@
-import * as React from "react";
 import css from "@emotion/css";
+import React, { useEffect, useState } from "react";
 
-export type IconProps = React.HTMLProps<HTMLBaseElement> & {
+type IconFile = {
   name: string;
   styleType?: "ios" | "md";
 };
 
-type IconState = React.HTMLProps<HTMLOrSVGElement> & {
-  svgIcon: string;
+const fetchIcons = async ({ styleType, name }: IconFile) => {
+  let svgIcon = "";
+
+  try {
+    const response = await fetch(
+      require(`ionicons/dist/ionicons/svg/${styleType}-${name}.svg`)
+    );
+
+    svgIcon = await response.text();
+  } catch (err) {
+    console.error(err);
+    svgIcon = "#";
+  }
+
+  return svgIcon;
 };
 
-export class Icon extends React.PureComponent<IconProps, IconState> {
-  state: IconState = {
-    svgIcon: ""
-  };
+export type IconProps = React.HTMLProps<HTMLBaseElement> & IconFile;
 
-  static defaultProps: Partial<IconProps> = {
-    styleType: "ios"
-  };
+export const Icon = ({ name, styleType = "ios", ...props }: IconProps) => {
+  const [svgIcon, setSvgIcon] = useState("");
 
-  public async componentDidMount() {
-    const { name, styleType } = this.props;
-    let svgIcon = "";
+  useEffect(() => {
+    fetchIcons({ name, styleType }).then(() => setSvgIcon(svgIcon));
+  }, []);
 
-    try {
-      const response = await fetch(
-        require(`ionicons/dist/ionicons/svg/${styleType}-${name}.svg`)
-      );
-
-      svgIcon = await response.text();
-    } catch (err) {
-      console.error(err);
-      svgIcon = "#";
-    }
-
-    this.setState({
-      svgIcon
-    });
-  }
-
-  public render() {
-    const { styleType, name, ...props } = this.props;
-    return (
-      <i
-        css={css`
-          svg {
-            width: 1em;
-            height: 1em;
-            fill: currentColor;
-            vertical-align: middle;
-          }
-        `}
-        dangerouslySetInnerHTML={{ __html: this.state.svgIcon }}
-        {...props}
-      />
-    );
-  }
-}
+  return (
+    <i
+      css={css`
+        svg {
+          width: 1em;
+          height: 1em;
+          fill: currentColor;
+          vertical-align: middle;
+        }
+      `}
+      dangerouslySetInnerHTML={{ __html: svgIcon }}
+      {...props}
+    />
+  );
+};
