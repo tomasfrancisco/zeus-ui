@@ -19,7 +19,6 @@ const fetchIcons = async ({ styleType, name }: IconFile) => {
     console.error(err);
     svgIcon = "#";
   }
-
   return svgIcon;
 };
 
@@ -29,7 +28,9 @@ export const Icon = ({ name, styleType = "ios", ...props }: IconProps) => {
   const [svgIcon, setSvgIcon] = useState("");
 
   useEffect(() => {
-    fetchIcons({ name, styleType }).then(() => setSvgIcon(svgIcon));
+    fetchIcons({ name, styleType }).then(fetchedSvgIcon =>
+      setSvgIcon(fetchedSvgIcon)
+    );
   }, []);
 
   return (
