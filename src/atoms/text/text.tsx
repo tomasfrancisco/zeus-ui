@@ -1,6 +1,6 @@
 import * as React from "react";
 import css from "@emotion/css";
-import { colors } from "../../_shared/styles";
+import { colors } from "src/global-styles";
 
 const defaultStyle = css`
   font-family: Josefin Sans;

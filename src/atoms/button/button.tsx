@@ -1,8 +1,8 @@
 import { css } from "@emotion/core";
 import React from "react";
 
-import { boxShadows, colors, transitions } from "../../_shared/styles";
 import { Icon } from "../icon";
+import { colors, boxShadows, transitions } from "src/global-styles";
 
 export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
   type: "default" | "outline" | "no-style";

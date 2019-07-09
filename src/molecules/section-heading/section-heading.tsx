@@ -1,7 +1,7 @@
 import css from "@emotion/css";
 import * as React from "react";
 
-import { colors } from "../../_shared/styles";
+import { colors } from "../../global-styles";
 import { H1, HeadingProps } from "../../atoms/heading";
 
 export type SectionHeadingProps = HeadingProps & {};

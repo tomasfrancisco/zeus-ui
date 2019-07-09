@@ -1,4 +1,5 @@
-// Colors
+import { css, Global } from "@emotion/core";
+
 export const colors = {
   WHITE: "#ffffff",
   ANZAC: "#e1bc44",
@@ -19,3 +20,19 @@ export const transitions = {
   DEFAULT_FUNCTION: "ease-in-out",
   LABEL: "all ease-in-out 0.25s"
 };
+
+export const fonts = {
+  DEFAULT_FONT_FAMILY: "Rajdhani"
+};
+
+export const globalStyles = css`
+  @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Rajdhani:400,700&display=swap");
+
+  body {
+    font-family: "Josefin Sans", sans-serif;
+  }
+`;
+
+export const GlobalStyles: React.FC<{}> = props => (
+  <Global styles={globalStyles} {...props} />
+);

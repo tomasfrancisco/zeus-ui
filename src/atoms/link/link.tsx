@@ -1,12 +1,11 @@
 import * as React from "react";
 import css from "@emotion/css";
-import { colors, transitions } from "../../_shared/styles";
+import { transitions, colors } from "src/global-styles";
 
 export type LinkProps = React.HTMLProps<HTMLAnchorElement> & {};
 
-export const Link = ({ ...props }: LinkProps) => (
+export const Link = ({ children, ...props }: LinkProps) => (
   <a
-    {...props}
     css={css`
       font-family: Josefin Sans;
       font-style: normal;
@@ -23,5 +22,8 @@ export const Link = ({ ...props }: LinkProps) => (
         color: ${colors.BRIGHT_SUN};
       }
     `}
-  />
+    {...props}
+  >
+    {children}
+  </a>
 );

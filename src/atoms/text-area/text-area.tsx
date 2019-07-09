@@ -4,7 +4,7 @@ import TextareaAutosize, {
   TextareaAutosizeProps
 } from "react-textarea-autosize";
 
-import { colors, transitions } from "../../_shared/styles";
+import { colors, transitions } from "../../global-styles";
 
 export type TextAreaProps = TextareaAutosizeProps;
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import css from "@emotion/css";
-import { colors, transitions } from "../../_shared/styles";
+import { colors, transitions } from "../../global-styles";
 
 type NavbarLinkProps = React.HTMLProps<HTMLAnchorElement> & {
   active?: boolean;

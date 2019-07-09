@@ -1,7 +1,6 @@
 import css from "@emotion/css";
 import React, { useState } from "react";
-
-import { colors, transitions } from "../../_shared/styles";
+import { colors, transitions } from "src/global-styles";
 
 export type InputProps = React.HTMLProps<HTMLInputElement>;
 
