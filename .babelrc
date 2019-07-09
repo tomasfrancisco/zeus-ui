@@ -1,10 +1,19 @@
 {
+  "plugins": [
+    "emotion",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "."
+        ],
+        "alias": {
+          "src": "./src",
+        }
+      }
+    ]
+  ],
   "env": {
-    "production": {
-      "plugins": [
-        "emotion"
-      ]
-    },
     "development": {
       "plugins": [
         [
@@ -13,17 +22,6 @@
             "sourceMap": true
           }
         ],
-        [
-          "module-resolver",
-          {
-            "root": [
-              "."
-            ],
-            "alias": {
-              "src": "./src",
-            }
-          }
-        ]
       ]
     }
   }
