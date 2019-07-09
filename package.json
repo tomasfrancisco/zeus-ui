@@ -4,6 +4,7 @@
   "description": "tomasfrancisco.com Design System",
   "main": "index.js",
   "scripts": {
+    "start": "start-storybook -p 8080",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o public"
   },
@@ -25,20 +26,20 @@
   },
   "homepage": "https://github.com/tomasfrancisco/tomasfrancisco.com-design-system#readme",
   "devDependencies": {
-    "@babel/core": "^7.3.4",
+    "@babel/core": "^7.4.5",
     "@emotion/babel-preset-css-prop": "^10.0.7",
     "@emotion/core": "^10.0.7",
-    "@storybook/addon-info": "^5.0.0-rc.9",
-    "@storybook/react": "^5.0.0-rc.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/react": "^5.1.9",
     "@types/react": "^16.8.6",
     "@types/react-textarea-autosize": "^4.3.3",
     "@types/storybook__addon-info": "^4.1.0",
-    "@types/storybook__react": "^4.0.1",
-    "babel-loader": "^8.0.5",
-    "react": "^16.8.3",
+    "@types/storybook__react": "^4.0.2",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
     "react-docgen-typescript-loader": "^3.0.1",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
-    "react-dom": "^16.8.3",
+    "react-dom": "^16.8.6",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
