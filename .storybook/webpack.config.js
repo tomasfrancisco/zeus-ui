@@ -1,4 +1,4 @@
-module.exports = ({ baseConfig, env, config }) => {
+module.exports = ({ config, mode }) => {
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     use: [
@@ -7,30 +7,12 @@ module.exports = ({ baseConfig, env, config }) => {
         options: {
           presets: [
             ["react-app", { flow: false, typescript: true }],
-            [
-              "@emotion/babel-preset-css-prop",
-              {
-                autoLabel: true,
-                labelFormat: "[local]"
-              }
-            ]
+            "@emotion/babel-preset-css-prop"
           ]
         }
       },
       {
-        loader: require.resolve("react-docgen-typescript-loader"),
-        options: {
-          propFilter: prop => {
-            if (prop.parent == null) {
-              return true;
-            }
-
-            // Filter out props which type definition is placed in react package
-            return (
-              prop.parent.fileName.indexOf("node_modules/@types/react") < 0
-            );
-          }
-        }
+        loader: require.resolve("react-docgen-typescript-loader")
       }
     ]
   });

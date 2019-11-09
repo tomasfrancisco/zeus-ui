@@ -1,11 +1,10 @@
 import { css } from "@emotion/core";
-import React from "react";
-
+import * as React from "react";
 import { boxShadows, colors, transitions } from "../../_shared/styles";
 import { Icon } from "../icon";
 
 export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
-  type: "default" | "outline" | "no-style";
+  type?: "default" | "outline" | "no-style";
   sizeType?: "default" | "large";
   icon?: string;
 };
@@ -25,9 +24,7 @@ export const Button = ({
           color: ${colors.ZEUS};
           box-shadow: ${boxShadows.DEFAULT};
           text-transform: uppercase;
-          transition: ${`all ${transitions.DEFAULT_FUNCTION} ${
-            transitions.DEFAULT_TIME
-          }`};
+          transition: ${`all ${transitions.DEFAULT_FUNCTION} ${transitions.DEFAULT_TIME}`};
           cursor: pointer;
 
           /* typography */

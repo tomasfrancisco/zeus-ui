@@ -1,48 +1,45 @@
 {
-  "name": "tomasfrancisco.com-design-system",
-  "version": "0.0.1",
-  "description": "tomasfrancisco.com Design System",
-  "main": "index.js",
-  "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tomasfrancisco/tomasfrancisco.com-design-system.git"
-  },
-  "keywords": [
-    "react",
-    "typescript",
-    "design-system",
-    "ui-system",
-    "components"
-  ],
-  "author": "@tomasfrancisco",
+  "name": "storybook-template",
+  "version": "0.0.2",
+  "description": "Storybook + React + Typescript = ♥",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tomasfrancisco/tomasfrancisco.com-design-system/issues"
-  },
-  "homepage": "https://github.com/tomasfrancisco/tomasfrancisco.com-design-system#readme",
-  "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@emotion/babel-preset-css-prop": "^10.0.7",
-    "@emotion/core": "^10.0.7",
-    "@storybook/addon-info": "^5.0.0-rc.9",
-    "@storybook/react": "^5.0.0-rc.9",
-    "@types/react": "^16.8.6",
-    "@types/react-textarea-autosize": "^4.3.3",
-    "@types/storybook__addon-info": "^4.1.0",
-    "@types/storybook__react": "^4.0.1",
-    "babel-loader": "^8.0.5",
-    "react": "^16.8.3",
-    "react-docgen-typescript-loader": "^3.0.1",
-    "react-docgen-typescript-webpack-plugin": "^1.1.0",
-    "react-dom": "^16.8.3",
-    "typescript": "^3.3.3333"
+  "author": "@tomasfrancisco",
+  "homepage": "https://storybook-template.netlify.com",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "start-storybook -p 8080",
+    "build": "build-storybook -c .storybook -o public",
+    "build:package": "rm -rf lib && tsc",
+    "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix",
+    "get-version": "echo \"package.json: v$npm_package_version\""
   },
   "dependencies": {
-    "ionicons": "^4.5.5",
-    "react-textarea-autosize": "^7.1.0"
-  }
+    "@emotion/core": "^10.0.22",
+    "ionicons": "^4.6.3",
+    "react": "16.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.6.4",
+    "@emotion/babel-preset-css-prop": "^10.0.23",
+    "@storybook/react": "latest",
+    "@types/storybook__react": "4.0.2",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "babel-loader": "8.0.6",
+    "babel-plugin-emotion": "^10.0.23",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "prettier": "^1.18.2",
+    "react-docgen-typescript-loader": "^3.3.0",
+    "react-dom": "16.11.0",
+    "typescript": "^3.6.4"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "react",
+    "storybook"
+  ]
 }
