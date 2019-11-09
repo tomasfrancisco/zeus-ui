@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "7.6.4",
     "@emotion/babel-preset-css-prop": "^10.0.23",
+    "@storybook/addon-info": "^5.2.6",
     "@storybook/react": "latest",
     "@types/storybook__react": "4.0.2",
     "@typescript-eslint/eslint-plugin": "^2.6.0",

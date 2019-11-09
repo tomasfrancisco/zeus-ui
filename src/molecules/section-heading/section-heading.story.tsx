@@ -1,9 +1,9 @@
 import { storiesOf } from "@storybook/react";
 import * as React from "react";
-
 import { SectionHeading } from "./section-heading";
 
-storiesOf("🎩Molecules/Section Heading", module).add(
+
+storiesOf("🎩 Molecules/Section Heading", module).add(
   "default",
   () => (
     <>
