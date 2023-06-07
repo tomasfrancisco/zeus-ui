@@ -3,7 +3,9 @@
   "version": "0.0.2",
   "description": "Storybook + React + Typescript = ♥",
   "license": "MIT",
-  "author": "@tomasfrancisco",
+  "author": {
+    "name": "@tomasfrancisco"
+  },
   "homepage": "https://storybook-template.netlify.com",
   "main": "src/index.js",
   "scripts": {
@@ -11,7 +13,8 @@
     "build": "build-storybook -c .storybook -o public",
     "build:package": "rm -rf lib && tsc",
     "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix",
-    "get-version": "echo \"package.json: v$npm_package_version\""
+    "get-version": "echo \"package.json: v$npm_package_version\"",
+    "chromatic": "npx chromatic --project-token=chpt_15c83239faadec6"
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
@@ -28,6 +31,7 @@
     "@typescript-eslint/parser": "^2.6.0",
     "babel-loader": "8.0.6",
     "babel-plugin-emotion": "^10.0.23",
+    "chromatic": "^6.18.0",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
@@ -42,5 +46,7 @@
     "typescript",
     "react",
     "storybook"
-  ]
+  ],
+  "readme": "ERROR: No README data found!",
+  "_id": "storybook-template@0.0.2"
 }
